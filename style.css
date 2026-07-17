@@ -1,250 +1,238 @@
-/* =========================
-   RESET
-========================= */
+<link rel="stylesheet" href="css/style.css">
+
+/* ===============================
+   DUO DYNAMICS
+   Premium Car & Motor Wash
+================================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     scroll-behavior:smooth;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#050505;
-    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#000;
+    color:#fff;
     line-height:1.6;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ===============================
+   HEADER
+================================= */
 
-.navbar{
+header{
     position:fixed;
+    width:100%;
     top:0;
     left:0;
-    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:rgba(0,0,0,.85);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-    border-bottom:2px solid #b8ff00;
+    padding:18px 30px;
 }
 
-.logo img{
-    height:65px;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#c7ff00;
+    text-decoration:none;
 }
 
-nav a{
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     font-weight:bold;
     transition:.3s;
 }
 
-nav a:hover{
-    color:#b8ff00;
+nav ul li a:hover{
+    color:#c7ff00;
 }
 
-/* =========================
+/* ===============================
    HERO
-========================= */
+================================= */
 
 .hero{
-    margin-top:90px;
-}
+    height:100vh;
 
-.hero-image{
-    width:100%;
-    display:block;
-    border-bottom:4px solid #b8ff00;
-}
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../images/hero.png");
 
-/* =========================
-   SECTION
-========================= */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-section{
-    padding:80px 10%;
-}
-
-section h2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    font-size:38px;
-    color:#b8ff00;
-    margin-bottom:35px;
+
+    padding:20px;
 }
 
-/* =========================
-   ABOUT
-========================= */
-
-#about{
-    text-align:center;
+.hero-content{
+    max-width:800px;
 }
 
-#about img{
-    width:100%;
-    max-width:900px;
-    border-radius:15px;
-    margin-bottom:25px;
-    border:3px solid #b8ff00;
-    box-shadow:0 0 20px #b8ff00;
+.hero h1{
+    font-size:70px;
+    color:white;
+    text-transform:uppercase;
 }
 
-#about p{
-    max-width:900px;
-    margin:auto;
+.tagline{
+    color:#c7ff00;
+    font-size:28px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.desc{
+    margin-top:25px;
     font-size:18px;
     color:#ddd;
 }
 
-/* =========================
-   SERVICES
-========================= */
-
-#services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+.hero-btn{
+    margin-top:40px;
 }
 
-.card{
-    background:#111;
-    border:2px solid #b8ff00;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px #b8ff00;
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card h3{
-    margin:20px;
-    color:#b8ff00;
-}
-
-.card p{
-    margin:0 20px 20px;
-}
-
-/* =========================
-   PRICE
-========================= */
-
-#price ul{
-    list-style:none;
-    max-width:450px;
-    margin:auto;
-}
-
-#price li{
-    background:#111;
-    margin:15px 0;
-    padding:18px;
-    border-left:5px solid #b8ff00;
-    border-radius:10px;
-    font-size:18px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-#contact{
-    text-align:center;
-}
-
-#contact p{
-    font-size:20px;
-    margin:12px 0;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:black;
-    padding:25px;
-    text-align:center;
-    border-top:2px solid #b8ff00;
-    color:#bbb;
-}
-
-/* =========================
+/* ===============================
    BUTTON
-========================= */
+================================= */
 
-.btn{
+.btn-glow{
     display:inline-block;
-    margin-top:25px;
-    padding:14px 30px;
-    background:#b8ff00;
+    background:#c7ff00;
     color:black;
     text-decoration:none;
-    font-weight:bold;
+    padding:15px 35px;
     border-radius:40px;
+    font-weight:bold;
+    margin:10px;
     transition:.3s;
 }
 
-.btn:hover{
-    background:white;
-    transform:scale(1.05);
+.btn-glow:hover{
+    box-shadow:0 0 25px #c7ff00;
+    transform:translateY(-4px);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.navbar{
-    flex-direction:column;
-    padding:15px;
+.btn-outline{
+    display:inline-block;
+    color:white;
+    border:2px solid #c7ff00;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    margin:10px;
+    transition:.3s;
 }
 
-nav{
-    margin-top:15px;
+.btn-outline:hover{
+    background:#c7ff00;
+    color:black;
 }
 
-nav a{
-    display:block;
-    margin:10px 0;
-}
-
-.logo img{
-    height:55px;
-}
+/* ===============================
+   SECTION
+================================= */
 
 section{
-    padding:60px 7%;
+    padding:90px 10%;
 }
 
 section h2{
-    font-size:30px;
+    text-align:center;
+    color:#c7ff00;
+    font-size:40px;
+    margin-bottom:50px;
 }
 
-#about p{
+/* ===============================
+   CARD
+================================= */
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#c7ff00;
+    box-shadow:0 0 25px rgba(199,255,0,.4);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer{
+    background:#050505;
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #222;
+    color:#aaa;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.tagline{
+    font-size:20px;
+}
+
+.desc{
     font-size:16px;
 }
 
-.card img{
-    height:180px;
+.hero{
+    height:auto;
+    padding:150px 20px 100px;
+}
+
+section h2{
+    font-size:32px;
 }
 
 }
